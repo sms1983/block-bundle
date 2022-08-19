@@ -239,13 +239,6 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     /**
      * {@inheritdoc}
      */
-    public function addChildren(self $children): void
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getChildren()
     {
         return new ArrayCollection();
