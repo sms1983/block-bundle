@@ -33,7 +33,7 @@ class SimpleBlockService extends AbstractBlockService implements BlockServiceInt
     /**
      * {@inheritdoc}
      */
-    public function execute(BlockContextInterface $blockContext, Response $response = null)
+    public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response
     {
         if (!$response) {
             $response = new Response();
@@ -57,7 +57,7 @@ class SimpleBlockService extends AbstractBlockService implements BlockServiceInt
     /**
      * {@inheritdoc}
      */
-    public function configureSettings(OptionsResolver $resolver)
+    public function configureSettings(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'template' => $this->template,
