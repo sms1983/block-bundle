@@ -34,7 +34,7 @@ class ContainerBlock extends AbstractBlock
     /**
      * {@inheritdoc}
      */
-    public function getType()
+    public function getType(): ?string
     {
         return 'cmf.block.container';
     }
@@ -89,7 +89,7 @@ class ContainerBlock extends AbstractBlock
      *
      * @return bool
      */
-    public function addChildren(BlockInterface $children)
+    public function addChildren(\Sonata\BlockBundle\Model\BlockInterface $children): void
     {
         return $this->addChild($children);
     }
@@ -111,7 +111,7 @@ class ContainerBlock extends AbstractBlock
     /**
      * {@inheritdoc}
      */
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return count($this->children) > 0;
     }
