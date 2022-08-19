@@ -347,7 +347,7 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     /**
      * {@inheritdoc}
      */
-    public function getTtl()
+    public function getTtl(): int
     {
         return $this->ttl;
     }
@@ -365,17 +365,15 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     /**
      * {@inheritdoc}
      */
-    public function setSettings(array $settings = [])
+    public function setSettings(array $settings = []): void
     {
         $this->settings = $settings;
-
-        return $this;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getSettings()
+    public function getSettings(): array
     {
         return $this->settings;
     }
@@ -383,7 +381,7 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     /**
      * {@inheritdoc}
      */
-    public function setSetting($name, $value)
+    public function setSetting(string $name, $value): void
     {
         $this->settings[$name] = $value;
 
@@ -393,7 +391,7 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     /**
      * {@inheritdoc}
      */
-    public function getSetting($name, $default = null)
+    public function getSetting(string $name, $default = null)
     {
         return isset($this->settings[$name]) ? $this->settings[$name] : $default;
     }
