@@ -384,8 +384,6 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     public function setSetting(string $name, $value): void
     {
         $this->settings[$name] = $value;
-
-        return $this;
     }
 
     /**
