@@ -236,6 +236,13 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
         return $this;
     }
 
+    // /**
+    //  * {@inheritdoc}
+    //  */
+    // public function addChildren(self $children): void
+    // {
+    // }
+
     /**
      * {@inheritdoc}
      */
@@ -291,29 +298,29 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
         return $this->parentDocument;
     }
 
-    /**
-     * {@inheritdoc}
-     *
-     * Redirect to setParentObject
-     */
-    public function setParent(?self $parent = null): void
-    {
-        $this->setParentObject($parent);
-    }
+    // /**
+    //  * {@inheritdoc}
+    //  *
+    //  * Redirect to setParentObject
+    //  */
+    // public function setParent(?self $parent = null): void
+    // {
+    //     $this->setParentObject($parent);
+    // }
 
     /**
      * {@inheritdoc}
      *
      * Check if getParentObject is instanceof BlockInterface, otherwise return null
      */
-    public function getParent(): ?self
-    {
-        if (($parent = $this->getParentObject()) instanceof BlockInterface) {
-            return $parent;
-        }
+    // public function getParent(): ?self
+    // {
+    //     if (($parent = $this->getParentObject()) instanceof BlockInterface) {
+    //         return $parent;
+    //     }
 
-        return null;
-    }
+    //     return null;
+    // }
 
     /**
      * {@inheritdoc}
