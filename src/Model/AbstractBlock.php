@@ -98,7 +98,7 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
     /**
      * {@inheritdoc}
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
 
