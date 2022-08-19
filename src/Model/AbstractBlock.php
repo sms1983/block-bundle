@@ -319,7 +319,7 @@ abstract class AbstractBlock implements BlockInterface, PublishableInterface, Pu
             return $parent;
         }
 
-        return;
+        return null;
     }
 
     /**
