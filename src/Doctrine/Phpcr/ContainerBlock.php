@@ -91,7 +91,7 @@ class ContainerBlock extends AbstractBlock
      */
     public function addChildren(\Sonata\BlockBundle\Model\BlockInterface $children): void
     {
-        return $this->addChild($children);
+        $this->addChild($children);
     }
 
     /**
