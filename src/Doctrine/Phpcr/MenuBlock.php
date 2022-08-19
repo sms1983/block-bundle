@@ -28,7 +28,7 @@ class MenuBlock extends AbstractBlock
     /**
      * {@inheritdoc}
      */
-    public function getType()
+    public function getType(): ?string
     {
         return 'cmf.block.menu';
     }
