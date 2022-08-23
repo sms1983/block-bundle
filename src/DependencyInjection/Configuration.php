@@ -31,8 +31,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('cmf_block');
+        $treeBuilder = new TreeBuilder('sms-block-bundle');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->children()
