@@ -285,4 +285,9 @@ class PhpcrBlockLoader implements BlockLoaderInterface
     {
         return $this->managerRegistry->getManager($this->managerName);
     }
+
+    public function exists(string $type): bool
+    {
+        //
+    }
 }
