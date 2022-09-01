@@ -33,7 +33,7 @@ class SimpleBlockService extends AbstractBlockService implements BlockServiceInt
     /**
      * {@inheritdoc}
      */
-    public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response
+    public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response: Response
     {
         if (!$response) {
             $response = new Response();

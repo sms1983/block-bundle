@@ -39,7 +39,7 @@ class MenuBlockService extends AbstractBlockService implements BlockServiceInter
     /**
      * {@inheritdoc}
      */
-    public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response
+    public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response: Response
     {
         $block = $blockContext->getBlock();
 
