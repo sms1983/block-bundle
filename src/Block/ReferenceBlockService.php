@@ -16,7 +16,8 @@ use Sonata\BlockBundle\Block\BlockContextManagerInterface;
 use Sonata\BlockBundle\Block\BlockRendererInterface;
 use Sonata\BlockBundle\Block\Service\AbstractBlockService;
 use Sonata\BlockBundle\Block\Service\BlockServiceInterface;
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+// use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+use Setono\PhpTemplates\Engine\EngineInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class ReferenceBlockService extends AbstractBlockService implements BlockServiceInterface
