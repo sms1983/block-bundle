@@ -40,7 +40,7 @@ class ActionBlockService extends AbstractBlockService
      */
     public function __construct($name, EngineInterface $templating, FragmentHandler $renderer, RequestStack $requestStack)
     {
-        parent::__construct($name, $templating);
+        parent::__construct($templating);
         $this->renderer = $renderer;
         $this->requestStack = $requestStack;
     }

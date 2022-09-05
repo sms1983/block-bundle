@@ -34,7 +34,7 @@ class ReferenceBlockService extends AbstractBlockService implements BlockService
      */
     public function __construct($name, EngineInterface $templating, BlockRendererInterface $blockRenderer, BlockContextManagerInterface $blockContextManager)
     {
-        parent::__construct($name, $templating);
+        parent::__construct($templating);
         $this->blockRenderer = $blockRenderer;
         $this->blockContextManager = $blockContextManager;
     }

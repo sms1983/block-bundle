@@ -29,7 +29,7 @@ class MenuBlockService extends AbstractBlockService implements BlockServiceInter
 
     public function __construct($name, $templating, $template = null)
     {
-        parent::__construct($name, $templating);
+        parent::__construct($templating);
 
         if ($template) {
             $this->template = $template;
