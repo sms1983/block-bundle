@@ -27,7 +27,7 @@ class SimpleBlockService extends AbstractBlockService implements BlockServiceInt
         if ($template) {
             $this->template = $template;
         }
-        parent::__construct($name, $templating);
+        parent::__construct($templating);
     }
 
     /**
