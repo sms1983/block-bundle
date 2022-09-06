@@ -39,6 +39,7 @@ class ReferenceBlockService extends AbstractBlockService implements BlockService
 
         $loader = new \Twig\Loader\FilesystemLoader($templatePath);
         $templating = new \Twig\Environment($loader);
+        $templating->addExtension(new \Sonata\BlockBundle\Twig\Extension\BlockExtension());
 
         parent::__construct($templating);
         $this->blockRenderer = $blockRenderer;
