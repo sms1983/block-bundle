@@ -19,6 +19,7 @@ use Sonata\BlockBundle\Block\Service\BlockServiceInterface;
 // use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Setono\PhpTemplates\Engine\EngineInterface;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 class ReferenceBlockService extends AbstractBlockService implements BlockServiceInterface
 {
@@ -32,8 +33,13 @@ class ReferenceBlockService extends AbstractBlockService implements BlockService
      * @param BlockRendererInterface       $blockRenderer
      * @param BlockContextManagerInterface $blockContextManager
      */
-    public function __construct($name, EngineInterface $templating, BlockRendererInterface $blockRenderer, BlockContextManagerInterface $blockContextManager)
+    public function __construct($name, EngineInterface $templating, BlockRendererInterface $blockRenderer, BlockContextManagerInterface $blockContextManager, $projectDir)
     {
+        $templatePath = $projectDir.'/templates';
+
+        $loader = new \Twig\Loader\FilesystemLoader($templatePath);
+        $templating = new \Twig\Environment($loader);
+
         parent::__construct($templating);
         $this->blockRenderer = $blockRenderer;
         $this->blockContextManager = $blockContextManager;

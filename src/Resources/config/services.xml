@@ -32,6 +32,7 @@
             <argument type="service" id="templating" />
             <argument type="service" id="sonata.block.renderer" />
             <argument type="service" id="sonata.block.context_manager" />
+            <argument>%kernel.project_dir%</argument>
         </service>
 
         <service id="cmf.block.action" class="Symfony\Cmf\Bundle\BlockBundle\Block\ActionBlockService">
